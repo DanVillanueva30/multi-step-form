@@ -23,5 +23,8 @@ export type AddOn = {
     price: number;
 }
 
-export type SelectedAddOn = Pick<AddOn, 'name' | 'price'>;
+export type SelectedAddOn = {
+    name: string;
+    price: number;
+}
 export type SelectedAddOns = SelectedAddOn[];

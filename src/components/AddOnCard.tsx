@@ -1,6 +1,6 @@
 
 import { useApp } from "../hooks/useApp";
-import { AddOn, SelectedAddOn } from "../types"
+import { AddOn } from "../types"
 
 type AddOnCardProps = {
     addOn: AddOn;
@@ -12,7 +12,7 @@ export default function AddOnCard({addOn}: AddOnCardProps) {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { checked } = event.target;
 
-        setSelectedAddOns((prevSelectedAddOns: SelectedAddOn[]) => {
+        setSelectedAddOns((prevSelectedAddOns) => {
             if (checked) {
                 return [...prevSelectedAddOns, { name: addOn.name, price: addOn.price }];
             } else {

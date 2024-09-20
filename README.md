@@ -67,32 +67,10 @@ Finally, to be able to show the summary information of the chosen options (subsc
 I learned more about TailwindCSS, for example, how to set custom colors, fonts,and how to add a background image, etc. The documentation is amazing, really easy to understand, and there are a lot of useful examples.
 I reinforced my knowledge about how to handle  global state and learned new things as well without using a library like Zustand.
 
-I faced several problems and I was able to solve almost all of them except for this one:
-In the component AddOnCard.tsx i couldn't typed correctly the prevSelectedAddOns param, I tried everything I could think of, but none of it worked. i even asked chatGPT for a solution but that didn't work either.
-
-This is the error: 
-An argument of type "(prevSelectedAddOns: SelectedAddOn[]) => SelectedAddOn[]" cannot be assigned to a parameter of type "SelectedAddOns".
-
-
-```typescript
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { checked } = event.target;
-
-        setSelectedAddOns((prevSelectedAddOns: SelectedAddOn[]) => {
-            if (checked) {
-                return [...prevSelectedAddOns, { name: addOn.name, price: addOn.price }];
-            } else {
-                return prevSelectedAddOns.filter(
-                    (selectedAddOn) => selectedAddOn.name !== addOn.name
-                );
-            }
-        });
-    };
-```
 
 ### Continued development
 
-I'll keep practicing with TailwindCSS. I think it is a really good framework and also really easy to work with. I will also keep searching for a solution to my problem with the AddOnCard.tsx component.
+I'll keep practicing with TailwindCSS. I think it is a really good framework and also really easy to work with.
 
 ### Useful resources
 

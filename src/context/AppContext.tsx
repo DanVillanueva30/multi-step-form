@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useState, SetStateAction } from "react";
 import { SelectedAddOns, SelectedPlan } from "../types";
 
 type AppProviderProps = { children: ReactNode }
@@ -9,7 +9,7 @@ type AppContextType = {
     isAnnual: boolean;
     setIsAnnual: (isAnnual: boolean) => void;
     selectedAddOns: SelectedAddOns;
-    setSelectedAddOns: (addOns: SelectedAddOns) => void;
+    setSelectedAddOns: React.Dispatch<SetStateAction<SelectedAddOns>>;
     resetApp: () => void;
 }
 const initialPlan = {
